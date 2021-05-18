@@ -1,1 +1,1 @@
-# redirection-panel
+# redirection
