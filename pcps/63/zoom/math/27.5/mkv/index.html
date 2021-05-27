@@ -136,7 +136,7 @@
 
 </div>
 <footer class="staticrypt-footer">
-    <p class="pull-right">Created with <a href="https://robinmoisson.github.io/staticrypt">StatiCrypt</a></p>
+    <p class="pull-right">Created by <a href="https://kaydenportfolio.fruittybob.com">Kayden Lee</a></p>
 </footer>
 
 
@@ -6170,7 +6170,7 @@
             decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
         if (decryptedHMAC !== encryptedHMAC) {
-            alert('Bad passphrase!');
+            alert('Wrong password.\nPlease contact kayden@programmer.net for password.');
             return;
         }
 
