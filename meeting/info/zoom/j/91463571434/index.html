@@ -1,0 +1,73 @@
+<h1>Meeting Information</h1>
+ <details>
+   <summary>Files</summary>
+   <p>The files below are for the lesson on 3 June 2021.</p>
+ </details>
+ <details>
+   <summary>Meeting Link</summary>
+   <p>Click <a href="https://zoom.us/j/91463571434" target="_blank">here</a> to open the meeting in a new tab.</p>
+   <p>Click <a href="https://zoom.us/j/91463571434">here</a> to open the meeting in the current tab.</p>
+ </details>
+ 
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+	*{
+			box-sizing: border-box;
+			transition: 0.25s;
+		}
+		body{
+      font: 18px/1.5 'Abel',system-ui, sans-serif;
+			padding: 0 2rem;
+			background: #000E;
+			color: dimgray;
+    }
+    h1{
+      text-align: center;
+      font-size: 3rem;
+      padding-bottom: 0.25em;
+      border-bottom: 1px solid silver;
+      border-image: linear-gradient(to right, transparent 20%, darkslategrey, transparent 80%)30;
+    }
+/*** Specific styles ***/
+    details{
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 0.25rem;
+			border: 1px solid silver;
+    }
+    summary{
+		  list-style-type: '✔  ';
+      font-size: 1.25rem;
+      font-weight: bold;
+      cursor: pointer; 
+      position: relative;
+			outline: none;
+			color: silver;
+    }
+    summary::after{
+      content: "🔻";
+      padding: 0.5rem;
+      position: absolute;
+      right: 0.25rem;
+      top: -0.5rem;
+      color: whitesmoke;
+    }
+    details[open]{
+			background: whitesmoke;
+    }
+	details[open] summary{
+		color: dimgrey;
+	}
+    details[open] summary::after{
+      content: "🔺";
+    }
+/*** End specific styles ***/
+    p{
+      color: dimgrey;
+      letter-spacing: 1.5;
+    }
+
+
+
+</style>
