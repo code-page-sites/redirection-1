@@ -1,1 +1,72 @@
 
+<div class="neon-bar">
+  <progress class='bar' value='0' max='100'></progress>
+  <span class='bar__value'>0%</span>
+</div>
+<p style="color:red;">Sorry, failed to load manifest file. We are scanning for files now. We would be back online soon. In the meantime, redirection links that were implemented can still be accessed. Thank you for your patience.</p>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Odibee Sans', cursive;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background: #111;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+$progress-height: 0.8em;
+$progress-padding: 0.2em;
+$progress-value-color: #03fcc2;
+$value-color: #fc0349;
+
+.bar {
+  -webkit-appearance: none;
+  height: $progress-height;
+
+  &::-webkit-progress-bar {
+    padding: $progress-padding;
+    border-radius: calc(#{$progress-height}/ 2);
+    background: lighten(#111, 5);
+  }
+  &::-webkit-progress-value {
+    background: $progress-value-color;
+    box-shadow: 0 0 0.6em lighten($progress-value-color, 2),
+      0 0 0.8em lighten($progress-value-color, 4);
+    border-radius: calc(#{$progress-height}/2);
+  }
+}
+
+.bar__value {
+  color: $value-color;
+  letter-spacing: 1px;
+  text-shadow: 0 0 .3em darken($value-color, 1),
+    0 0 .6em darken($value-color, 6);
+}
+
+</style>
+
+<script>
+  const progressBar = document.querySelector(".bar"),
+      progressBarValue = document.querySelector('.bar__value');
+let value = 0,
+  max = 100;
+
+let anim = setInterval(() => {
+  if (value == max) {
+    clearInterval(anim);
+  } else {
+    value += 1;
+    progressBar.value = value;
+    progressBarValue.innerText = value + '%';
+  }
+}, 80);
+
+</script>
