@@ -6173,7 +6173,7 @@
             decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
         if (decryptedHMAC !== encryptedHMAC) {
-            alert('Wrong password\nPlease try again or contact the owner for the password.');
+            alert('The value you gave us is wrong\nAre you a human?\n...or are you a baby?');
             return;
         }
 
