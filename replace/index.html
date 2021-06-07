@@ -141,18 +141,28 @@
 <script>
 function replacePrompt() {
   var text;
-  var favDrink = prompt("Where would you like to go?\nType 'Help' for more information.", "Help");
-  switch(favDrink) {
+  var replacePrompt = prompt("Where would you like to go?\nType 'Help' for more information.", "");
+  switch(replacePrompt) {
     case "elwchris":
       location.replace("https://replace.vercel.app/elwchris")
+      text = "Redirecting...";
+      break;
+     case "PCPS Forms":
+      location.replace("https://pcpsforms1.vercel.app/enter-form.html")
       text = "Redirecting...";
       break;
     case "Help":
       text = "plsc";
       break;
+     case "elwchris":
+      location.replace("https://replace.vercel.app/elwchris")
+      text = "Redirecting...";
+      break;
     case "Cosmopolitan":
       text = "Really? Are you sure the Cosmopolitan is your favorite?\nTest";
       break;
+      
+      
      case "":
       text = "Please enter something so that I can help you.";
       break;
