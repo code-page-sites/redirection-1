@@ -1,4 +1,4 @@
-<title>Redirection</title>
+<!-- <title>Redirection</title>
 <div class="neon-bar" style="color:red;">
   <progress class='bar' value='0' max='100'></progress>
   <span class='bar__value'>0%</span>
@@ -70,3 +70,308 @@ let anim = setInterval(() => {
 }, 80);
 
 </script>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<!-- Hide source code -->
+<!--   From https://stackoverflow.com/questions/25228476/how-to-hide-the-source-code-of-a-html-page -->
+<!--   Disable right-click -->
+  <body oncontextmenu="return false" onload="replacePrompt()" onload="mousehandler(e)">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<!--   Disable ctrl+u, F12 -->
+  <script type="text/javascript">
+    function mousehandler(e) {
+        var myevent = (isNS) ? e : event;
+        var eventbutton = (isNS) ? myevent.which : myevent.button;
+        if ((eventbutton == 2) || (eventbutton == 3)) return false;
+    }
+    document.oncontextmenu = mischandler;
+    document.onmousedown = mousehandler;
+    document.onmouseup = mousehandler;
+    function disableCtrlKeyCombination(e) {
+        var forbiddenKeys = new Array("a", "s", "c", "x","u");
+        var key;
+        var isCtrl;
+        if (window.event) {
+            key = window.event.keyCode;
+            //IE
+            if (window.event.ctrlKey)
+                isCtrl = true;
+            else
+                isCtrl = false;
+        }
+        else {
+            key = e.which;
+            //firefox
+            if (e.ctrlKey)
+                isCtrl = true;
+            else
+                isCtrl = false;
+        }
+        if (isCtrl) {
+            for (i = 0; i < forbiddenKeys.length; i++) {
+                //case-insensitive comparation
+                if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+</script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<p></p>
+
+<button onclick="replacePrompt()">Go -></button>
+
+<p id="replace"></p>
+
+<script>
+function replacePrompt() {
+  var text;
+  var replacePrompt = prompt("Where would you like to go?\nType 'Help' for more information.", "");
+  switch(replacePrompt) {
+    case "elwchris":
+      location.replace("https://replace.vercel.app/elwchris")
+      text = "Redirecting...";
+      break;
+     case "PCPS Forms":
+      location.replace("https://pcpsforms1.vercel.app/enter-form.html")
+      text = "Redirecting...";
+      break;
+    case "Help":
+      text = "plsc";
+      break;
+     case "elwchris":
+      location.replace("https://replace.vercel.app/elwchris")
+      text = "Redirecting...";
+      break;
+    case "Home":
+      text = "You are already on the home page bro.";
+      break;
+      
+      
+     case "":
+      text = "Please enter something so that I can help you.";
+      break;
+    default:
+      text = "Sorry, I don't think we can help you go to that one...";
+      
+  }
+  document.getElementById("replace").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
