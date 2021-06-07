@@ -145,12 +145,16 @@ function replacePrompt() {
   switch(favDrink) {
     case "Martini":
       location.replace("https://replace.vercel.app/elwchris")
+      text = "Redirecting...";
       break;
     case "Help":
       text = "plsc";
       break;
     case "Cosmopolitan":
       text = "Really? Are you sure the Cosmopolitan is your favorite?";
+      break;
+     case "":
+      text = "Please enter something so that I can help you.";
       break;
     default:
       text = "Sorry, I don't think we can help you go to that one...";
