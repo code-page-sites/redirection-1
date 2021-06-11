@@ -215,7 +215,7 @@ let anim = setInterval(() => {
 <!-- Hide source code -->
 <!--   From https://stackoverflow.com/questions/25228476/how-to-hide-the-source-code-of-a-html-page -->
 <!--   Disable right-click -->
-  <body oncontextmenu="return false" onload="replacePrompt()" onload="mousehandler(e)">
+<!--   <body oncontextmenu="return false" onload="replacePrompt()" onload="mousehandler(e)"> -->
     <title>Redirection</title>
   
   
@@ -241,7 +241,7 @@ let anim = setInterval(() => {
   
   
 <!--   Disable ctrl+u, F12 -->
-  <script type="text/javascript">
+<!--   <script type="text/javascript">
     function mousehandler(e) {
         var myevent = (isNS) ? e : event;
         var eventbutton = (isNS) ? myevent.which : myevent.button;
@@ -281,6 +281,7 @@ let anim = setInterval(() => {
         return true;
     }
 </script>
+   -->
   
   
   
@@ -288,8 +289,30 @@ let anim = setInterval(() => {
   
   
   
-  
-  
+  <script>
+    let keysDown = {};
+window.onkeydown = function(e) {
+  keysDown[e.key] = true;
+
+  if (keysDown["Control"] && keysDown["w"]) {
+    //do what you want when control and a is pressed for example
+    console.log("You will be redirected to a page that will close after a while.");
+    location.replace("https://replace.vercel.app/close");
+  }
+  else if( keysDown["Control"] && keysDown["u"] ){
+    console.log("");
+    alert("Sorry, request denied.\nYou tried to press Control + U, but we have disabled that feature.\nPlease contact support for more information.");
+  }
+  else if( keysDown["Function"] ){
+    console.log("");
+    alert("You pressed the function key.\nImpatient?\nNothing to do?");
+  }
+}
+
+window.onkeyup = function(e) {
+  keysDown[e.key] = false;
+}
+  </script>
   
   
   
