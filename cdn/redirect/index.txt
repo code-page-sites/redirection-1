@@ -1,0 +1,5 @@
+<script>
+        var timer = setTimeout(function () {
+            window.location = 'https://replace.vercel.app'
+        }, 1000);
+    </script>
