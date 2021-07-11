@@ -1,0 +1,41 @@
+<script>
+    //For Firefox we have to handle it in JavaScript 
+var vids = $("video"); 
+$.each(vids, function(){
+       this.controls = false; 
+}); 
+//Loop though all Video tags and set Controls as false
+
+$("video").click(function() {
+  //console.log(this); 
+  if (this.paused) {
+    this.play();
+  } else {
+    this.pause();
+  }
+});
+</script>
+
+<style>
+    video::-webkit-media-controls {
+  display: none;
+}
+
+/* Could Use thise as well for Individual Controls */
+video::-webkit-media-controls-play-button {}
+
+video::-webkit-media-controls-volume-slider {}
+
+video::-webkit-media-controls-mute-button {}
+
+video::-webkit-media-controls-timeline {}
+
+video::-webkit-media-controls-current-time-display {}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
+<!-- Hiding HTML5 Video Controls using CSS Pseudo selectors -->
+
+<video width="800" autoplay controls="false">
+  <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
+</video>
