@@ -2,235 +2,13 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Awesomesites - Dashboard | Redirection</title>
+  <title>Awesomesites - Dashboard</title>
+  <!-- <link rel="stylesheet" href="./style.css"> -->
   <link rel="icon" href="https://awesomesites.com.sg/wp-content/uploads/2020/07/cropped-Awesome-Sites-Favicon-32x32.png" sizes="32x32" />
-  <link rel="stylesheet" href="https://replace.vercel.app/services/awesomesites.com.sg/dashboard/style.css">
-
 </head>
-
-<style>
-    body{
-    background: linear-gradient(to left,rgb(253, 250, 255),rgb(255, 246, 246),rgb(245, 251, 255),rgb(255, 244, 251));
-    font-family: 'Montserrat';
-}
-
-.container,.left-sidebar,.left-sidebar div,.box-container,.box,.box-row,.buttons-container{
-    display: flex;
-}
-
-.container,.left-sidebar div,.box-container,.box-row,.buttons-container{
-    flex-direction: row;
-}
-
-.top-left-sidebar-link,.left-sidebar div:nth-child(2) ion-icon,.buttons,.search-icon{
-    color:white;
-}
-
-.left-sidebar-links,.left-sidebar-links,ion-icon{
-    color:rgb(4, 14, 84);
-}
-
-.top-bar,.box{
-    background: white;
-}
-
-.top-bar{
-    margin: -1px 0px 0px -22px;
-    width: 101.9%;
-    height: 5rem;
-    background: white;
-    box-shadow: .2px .2px 10px .2px white;
-    background: linear-gradient(to left,rgb(253, 254, 255),rgb(255, 255, 255));
-    border-top-right-radius:8px ;
-}
-
-.box,.left-sidebar{
-    flex-direction: column;
-}
-
-.container{
-    justify-content: center;
-}
-
-.left-sidebar,.dashboard{
-    background: linear-gradient(to left,white,transparent,white,transparent);
-    margin: 20px 0px 0px 0px;
-    padding:0px 0px 0px 22px;
-}
-
-.left-sidebar{
-    box-shadow: .2px .2px 3px .2px rgb(157, 157, 157);
-    padding:0px 0px 0px 22px;
-    height: 42.8rem;
-    width: 12rem;
-    gap: 52px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    background: linear-gradient(to left,white,transparent,white,transparent);
-}
-
-.dashboard{
-    border:2px solid transparent;
-    box-shadow: .2px .2px 1px .2px gray;
-    height: 42.6rem;
-    width: 80%;
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-.left-sidebar h2{
-    border-top-left-radius: 8px;
-    box-shadow: .2px .2px 1px .2px whitesmoke;
-    padding: 17px 2px 17px 22px;
-    margin: 0px 0px 0px -22px;
-    letter-spacing: 2px;
-    border-radius: none;
-    background:white;
-}
-
-.dashboard h2{
-    padding: 17px 2px 17px 22px;
-    margin: 0px 0px 0px -21px;
-    letter-spacing: 2px;
-    border-radius: none;
-    background: linear-gradient(to left,transparent,rgb(241, 242, 255),transparent,rgb(249, 250, 255));
-    box-shadow: .2px .2px 2px .2px rgb(196, 201, 245);
-}
-
-.left-sidebar div{
-    gap:10px;
-    width: 70%;
-    padding:6px 12px 10px 31px;
-    margin: -20px 0px 0px -7px;
-    box-shadow: .2px .2px 3px .2px rgb(218, 217, 217);
-    background: linear-gradient(to left,white,transparent,white,transparent);
-    border-radius: 2px;
-}
-
-ion-icon{
-    font-size: 1.5rem;
-}
-
-a{
-    text-decoration: none;
-}
-
-.left-sidebar-links{
-    letter-spacing: 2px;
-    margin: 4px 0px 0px 10px;
-    font-family: 'Roboto';
-}
-
-.box-container{
-    gap:18px;
-}
-
-.box{
-    width: 17.5rem;
-    height: 12rem;
-    border:1px solid whitesmoke;
-    box-shadow: .2px .2px 2px .2px lightgray;
-    padding:22px 2px 2px 2px;
-}
-
-.line{
-    margin: 0px 0px 0px -3px;
-    width: 102%;
-    height: .2rem;
-    background:linear-gradient(to left,rgb(137, 133, 248),rgb(137, 137, 255)) ;
-    box-shadow: .2px .2px 3px .2px rgb(214, 214, 214);
-}
-
-.box-row{
-    gap:20px;
-}
-
-img{
-    padding:0px 2px 2px 22px;
-    width: 2.7rem;
-    height: auto;
-}
-
-p{
-    margin: 9px 0px 0px 20px;
-    font-family: 'Roboto';
-}
-
-.buttons-container{
-    justify-content: center;
-    padding: 15px 0px 0px 0px;
-    gap:50px;
-}
-
-.buttons{
-    box-shadow: .2px .2px 4px .2px rgb(59, 52, 255);
-    background:linear-gradient(to left,rgb(76, 70, 253),rgb(64, 64, 250)) ;
-    padding:4px 22px 4px 22px;
-    border-radius: 4px;
-    font-family: 'Roboto';
-    font-size: 15.7px;
-    letter-spacing: 1px;
-}
-
-.buttons:hover{
-    background: none;
-    color:black;
-    transition: .3s;
-    box-shadow: .2px .2px 4px .2px lightgray;
-}
-
-input{
-    width: 65%;
-    height: 2rem;
-    box-shadow: .2px .2px 4px .2px rgb(226, 226, 226);
-    border:none;
-    padding:6px 2px 6px 2px;
-    margin:0px 0px 0px 30px;
-    outline: none;
-}
-
-input::placeholder{
-    font-family: 'Roboto';
-    padding: 0px 0px 0px 12px;
-    letter-spacing: 1px;
-    color:rgb(96, 96, 96);
-}
-
-.search-icon{
-    position: relative;
-    top:6px;
-    left:-35px;
-    font-size: 18px;
-    padding:2.5px 3px 2px 4px;
-    border-radius: 200px;
-    background:rgb(50, 43, 255);
-    box-shadow: .2px .2px 2px .2px rgb(96, 96, 96);
-}
-
-.search-icon:hover{
-    cursor: pointer;
-    color:rgb(50, 43, 255);
-    background: none;
-    transition: .3s;
-}
-
-.left-sidebar div:nth-child(2){
-    background:linear-gradient(to left,rgb(76, 70, 253),rgb(64, 64, 250)) ;
-    margin: -20px 0px 0px 5px;
-    padding:10px 2px 10px 22px ;
-    box-shadow: .2px .2px 2px .2px rgb(50, 43, 255);
-}
-
-.top-left-sidebar-link{
-    margin: 2px 0px 0px 10px;
-    font-family: 'Roboto';
-    letter-spacing: 1px;
-}
-</style>
-
 <body>
 <!-- partial:index.partial.html -->
-<link rel='stylesheet' href='style.css'>
+<link rel='stylesheet' href='https://replace.vercel.app/services/awesomesites.com.sg/dashboard/style.css'>
 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
 
@@ -264,7 +42,7 @@ input::placeholder{
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Awesomesites</title>
     </head>
     <body>
 
@@ -284,13 +62,65 @@ input::placeholder{
 
                     </div>
 
-                    <div>
+                    <!-- <div>
 
                         <ion-icon name="home-outline"></ion-icon>
 
-                        <a class='left-sidebar-links' href='https://awesomesites.com.sg'>Site</a>
+                        <a class='left-sidebar-links' href='#'>Home</a>
 
                     </div>
+
+                    <div>
+
+                        <ion-icon name="Apps-outline"></ion-icon>
+
+                        <a class='left-sidebar-links' href='#'>Apps</a>
+
+                    </div> -->
+
+
+
+                    <!-- <div>
+
+                        <ion-icon name="storefront-outline"></ion-icon>
+
+                        <a class='left-sidebar-links' href='#'>Shop</a>
+
+                    </div>
+
+                    <div>
+
+                        <ion-icon name="refresh"></ion-icon>
+
+                        <a class='left-sidebar-links' href='#'>Updates</a>
+
+                    </div>
+
+                    <div>
+
+                        <ion-icon name="cash-outline"></ion-icon>
+
+                        <a class='left-sidebar-links' href='#'>Payment</a>
+
+                    </div> -->
+
+
+                    <!-- <div>
+
+                        <ion-icon name="person-outline"></ion-icon>
+
+                        <a class='left-sidebar-links' href='#'>Profile</a>
+
+                    </div>
+
+                    <div>
+
+                        <ion-icon name="settings-outline"></ion-icon>
+
+                        <a class='left-sidebar-links' href='#'>Settings</a>
+
+                    </div> -->
+
 
                 </div>
 
@@ -317,7 +147,7 @@ input::placeholder{
 
                             <div class='box-row'>
 
-                              <a href=""><img src="https://awesomesites.com.sg/wp-content/uploads/2020/07/cropped-Awesome-Sites-Favicon-32x32.png" title="10 July 2021 Google Analytics recordings" /></a>
+                              <a href="https://awesomesites.com.sg/"><img src="https://awesomesites.com.sg/wp-content/uploads/2020/07/cropped-Awesome-Sites-Favicon-32x32.png" title="10 July 2021 Google Analytics recordings" /></a>
 
                                 <p>10 July 2021 Google Analytics recordings</p>
 
@@ -333,13 +163,398 @@ input::placeholder{
 
                             <div class='buttons-container'>
 
-                                <a class='buttons' href='#'>Watch</a>
-                                <a class='buttons' href='#'>Download</a>
+                                <a class='buttons' href='https://replace.vercel.app/services/awesomesites.com.sg/videos/ga/dashboard'>Watch</a>
+                                <a class='buttons' href='https://replace.vercel.app/services/awesomesites.com.sg/videos/ga/dashboard/download'>Download</a>
 
                             </div>
 
                         </div>
 
+                        <!-- <div class='box'>
+
+                            <div class='box-row'>
+<a href="https://imgur.com/MZI0pta"><img src="https://i.imgur.com/MZI0pta.png" title="source: imgur.com" /></a>
+
+                                <p>Facebook</p>
+
+                            </div>
+
+                            <br>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                            <br>
+
+                            <div class='line'></div>
+
+                            <div class='buttons-container'>
+
+                                <a class='buttons' href='#'>Install</a>
+                                <a class='buttons' href='#'>Share</a>
+
+                            </div>
+
+                        </div> -->
+                        <!-- <div class='box'>
+
+                            <div class='box-row'>
+<a href="https://imgur.com/hl7zmYc"><img src="https://i.imgur.com/hl7zmYc.png" title="source: imgur.com" /></a>
+
+                                <p>Dropbox</p>
+
+                            </div>
+
+                            <br>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                            <br>
+
+                            <div class='line'></div>
+
+                            <div class='buttons-container'>
+
+                                <a class='buttons' href='#'>Install</a>
+                                <a class='buttons' href='#'>Share</a>
+
+                            </div>
+
+                        </div> -->
+                        <!-- <div class='box'>
+
+                            <div class='box-row'>
+
+<a href="https://imgur.com/DIJ9PEz"><img src="https://i.imgur.com/DIJ9PEz.png" title="source: imgur.com" /></a>
+                                <p>Google Drive</p>
+
+                            </div>
+
+                            <br>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                            <br>
+
+                            <div class='line'></div>
+
+                            <div class='buttons-container'>
+
+                                <a class='buttons' href='#'>Install</a>
+                                <a class='buttons' href='#'>Share</a>
+
+                            </div>
+
+                        </div> -->
+
+                    </div>
+
+                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Plugins & Themes -->
+
+                    <!-- <div class='box-container'>
+
+                        <div class='box'>
+
+                            <div class='box-row'>
+
+                          <a href="https://awesomesites.com.sg/"><img src="https://awesomesites.com.sg/wp-content/uploads/2020/07/cropped-Awesome-Sites-Favicon-32x32.png" title="Plugins & Themes" /></a>
+                                <p>Plugins & Themes</p>
+
+                            </div>
+
+                            <br>
+
+                            <p>WordPress Plugins & Themes</p>
+
+                            <br>
+
+                            <div class='line'></div>
+
+                            <div class='buttons-container'>
+
+                                <button class='buttons' href='#' disabled>View</button>
+                                <a class='buttons' href='#'>Download</a>
+
+                            </div>
+
+                        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- <div class='box'>
+
+                            <div class='box-row'>
+
+                          <a href="https://imgur.com/YJYSwoB"><img src="https://i.imgur.com/YJYSwoB.png" title="source: imgur.com" /></a>
+
+                                <p>Netflix</p>
+
+                            </div>
+
+                            <br>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                            <br>
+
+                            <div class='line'></div>
+
+                            <div class='buttons-container'>
+
+                                <a class='buttons' href='#'>Install</a>
+                                <a class='buttons' href='#'>Share</a>
+
+                            </div>
+
+                        </div> -->
                         
 
                     </div>
