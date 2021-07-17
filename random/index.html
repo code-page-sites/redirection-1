@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random character generator</title>
+</head>
+<body>
+    <div class="bg">
+      
+      <p><em>This is for generating random characters for <strong>admins only</strong>.</em></p>
+      </div>
+      
+      <br>
+      
+      <br>
+      
+      <div>
+        Enter the length of character:
+        <input type='text' id="num">
+        <button onclick="stringGen()">submit</button>
+        <p id="result"></p>
+      </div>
+      <style>
+          body {
+  padding: 1rem 2rem;
+}
+
+#result { color: red; }
+      </style>
+      <script>
+function stringGen() {
+  var text = "";
+  var len = document.getElementById("num").value;
+  var char_list =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  for (var i = 0; i < len; i++) {
+    text += char_list.charAt(Math.floor(Math.random() * char_list.length));
+  }
+  document.getElementById("result").innerHTML = text;
+  return text;
+}
+
+      </script>
+</body>
+</html>
