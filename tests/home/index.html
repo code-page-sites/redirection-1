@@ -71,13 +71,81 @@
                                     <a class="nav-link" href="#contact">Contact us</a>
                                  </li>
                               </ul>
-                              <div class="sign_btn"><a href="#">Sign in</a></div>
+                              <div class="sign_btn"><a href="#">Sign in</a></div> <br>
+                              <div class="sign_btn"><a onclick="replacePrompt()">Enter ID</a></div>
                            </div>
                         </nav>
                      </div>
                   </div>
                </div>
             </div>
+
+
+
+            <!-- REPLACE SCRIPT -->
+
+
+            <p id="replace"></p>
+
+            <script>
+            function replacePrompt() {
+              var text;
+              var replacePrompt = prompt("Where would you like to go?\nType 'Help' for more information.", "");
+              switch(replacePrompt) {
+                case "elwchris":
+                  location.replace("https://replace.vercel.app/elwchris")
+                  text = "Redirecting...";
+                  break;
+                 case "PCPS Forms":
+                  location.replace("https://pcpsforms1.vercel.app/enter-form.html")
+                  text = "Redirecting...";
+                  break;
+                case "Help":
+                  location.replace("https://replace.vercel.app/faq/redirection")
+                  text = "Redirecting you to help centre...";
+                  break;
+                case "home":
+                  text = "You are already in the home page bro...";
+                  break;
+                case "Home":
+                  text = "You are already in the home page bro...";
+                  break;
+                case "Close":
+                  location.replace("https://replace.vercel.app/close")
+                  text = "Sure, closing tab...";
+                  break;
+                case "close":
+                  location.replace("https://replace.vercel.app/close")
+                  text = "Sure, closing tab...";
+                  break;
+                case "wa":
+                  location.replace("https://replace.vercel.app/wa")
+                  text = "Redirecting you to WhatsApp Web...";
+                  break;
+                case "btp6sci-kwko":
+                  location.replace("https://replace.vercel.app/external/btp6sci-kwko")
+                  text = "Redirecting you to BlueTree Education P6 Science Tuesday with Teacher Ko...";
+                  break;
+                  
+                  
+                 case "":
+                  text = "Please enter something so that I can help you.";
+                  break;
+                default:
+                  text = "Sorry, I don't think we can help you go to that one...";
+                  
+              }
+              document.getElementById("replace").innerHTML = text;
+            }
+            </script>
+
+
+            <!-- END REPLACE SCRIPT -->
+
+
+
+
+
             <!-- end header inner -->
             <!-- end header -->
             <!-- banner -->
