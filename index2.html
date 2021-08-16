@@ -1,0 +1,415 @@
+<!-- <title>Redirection</title>
+<div class="neon-bar" style="color:red;">
+  <progress class='bar' value='0' max='100'></progress>
+  <span class='bar__value'>0%</span>
+</div>
+<p style="color:red;">Sorry, failed to load manifest file. We are scanning for files now. We would be back online soon. In the meantime, redirection links that were implemented can still be accessed. Thank you for your patience.</p>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Odibee Sans', cursive;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background: #111;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+$progress-height: 0.8em;
+$progress-padding: 0.2em;
+$progress-value-color: #03fcc2;
+$value-color: #fc0349;
+
+.bar {
+  -webkit-appearance: none;
+  height: $progress-height;
+
+  &::-webkit-progress-bar {
+    padding: $progress-padding;
+    border-radius: calc(#{$progress-height}/ 2);
+    background: lighten(#111, 5);
+  }
+  &::-webkit-progress-value {
+    background: $progress-value-color;
+    box-shadow: 0 0 0.6em lighten($progress-value-color, 2),
+      0 0 0.8em lighten($progress-value-color, 4);
+    border-radius: calc(#{$progress-height}/2);
+  }
+}
+
+.bar__value {
+  color: $value-color;
+  letter-spacing: 1px;
+  text-shadow: 0 0 .3em darken($value-color, 1),
+    0 0 .6em darken($value-color, 6);
+}
+
+</style>
+
+<script>
+  const progressBar = document.querySelector(".bar"),
+      progressBarValue = document.querySelector('.bar__value');
+let value = 0,
+  max = 100;
+
+let anim = setInterval(() => {
+  if (value == max) {
+    clearInterval(anim);
+  } else {
+    value += 1;
+    progressBar.value = value;
+    progressBarValue.innerText = value + '%';
+  }
+}, 80);
+
+</script>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<!-- Hide source code -->
+<!--   From https://stackoverflow.com/questions/25228476/how-to-hide-the-source-code-of-a-html-page -->
+<!--   Disable right-click -->
+  <body oncontextmenu="return false" onload="replacePrompt()">
+    <title>Redirection</title>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<!--   Disable ctrl+u, F12 -->
+<!--   <script type="text/javascript">
+    function mousehandler(e) {
+        var myevent = (isNS) ? e : event;
+        var eventbutton = (isNS) ? myevent.which : myevent.button;
+        if ((eventbutton == 2) || (eventbutton == 3)) return false;
+    }
+    document.oncontextmenu = mischandler;
+    document.onmousedown = mousehandler;
+    document.onmouseup = mousehandler;
+    function disableCtrlKeyCombination(e) {
+        var forbiddenKeys = new Array("a", "s", "c", "x","u");
+        var key;
+        var isCtrl;
+        if (window.event) {
+            key = window.event.keyCode;
+            //IE
+            if (window.event.ctrlKey)
+                isCtrl = true;
+            else
+                isCtrl = false;
+        }
+        else {
+            key = e.which;
+            //firefox
+            if (e.ctrlKey)
+                isCtrl = true;
+            else
+                isCtrl = false;
+        }
+        if (isCtrl) {
+            for (i = 0; i < forbiddenKeys.length; i++) {
+                //case-insensitive comparation
+                if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+</script>
+   -->
+  
+  
+  
+  
+  
+  
+  
+  <script>
+    let keysDown = {};
+window.onkeydown = function(e) {
+  keysDown[e.key] = true;
+
+  if (keysDown["Control"] && keysDown["w"]) {
+    //do what you want when control and a is pressed for example
+    console.log("You will be redirected to a page that will close after a while.");
+    location.replace("https://replace.vercel.app/close");
+  }
+  else if( keysDown["Control"] && keysDown["u"] ){
+    console.log("");
+    alert("Sorry, request denied.\nYou tried to press Control + U, but we have disabled that feature.\nPlease contact support for more information.");
+  }
+  else if( keysDown["Function"] ){
+    console.log("");
+    alert("You pressed the function key.\nImpatient?\nNothing to do?");
+  }
+}
+
+window.onkeyup = function(e) {
+  keysDown[e.key] = false;
+}
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<p></p>
+
+<button onclick="replacePrompt()">Go -></button>
+
+<p id="replace"></p>
+
+<script>
+function replacePrompt() {
+  var text;
+  var replacePrompt = prompt("Where would you like to go?\nType 'Help' for more information.", "");
+  switch(replacePrompt) {
+    case "elwchris":
+      location.replace("https://replace.vercel.app/elwchris")
+      text = "Redirecting...";
+      break;
+     case "PCPS Forms":
+      location.replace("https://pcpsforms1.vercel.app/enter-form.html")
+      text = "Redirecting...";
+      break;
+    case "Help":
+      location.replace("https://replace.vercel.app/faq/redirection")
+      text = "Redirecting you to help centre...";
+      break;
+    case "home":
+      text = "You are already in the home page bro...";
+      break;
+    case "Home":
+      text = "You are already in the home page bro...";
+      break;
+    case "Close":
+      location.replace("https://replace.vercel.app/close")
+      text = "Sure, closing tab...";
+      break;
+    case "close":
+      location.replace("https://replace.vercel.app/close")
+      text = "Sure, closing tab...";
+      break;
+    case "wa":
+      location.replace("https://replace.vercel.app/wa")
+      text = "Redirecting you to WhatsApp Web...";
+      break;
+    case "btp6sci-kwko":
+      location.replace("https://replace.vercel.app/external/btp6sci-kwko")
+      text = "Redirecting you to BlueTree Education P6 Science Tuesday with Teacher Ko...";
+      break;
+      
+      
+     case "":
+      text = "Please enter something so that I can help you.";
+      break;
+    default:
+      text = "Sorry, I don't think we can help you go to that one...";
+      
+  }
+  document.getElementById("replace").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

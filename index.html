@@ -1,415 +1,424 @@
-<!-- <title>Redirection</title>
-<div class="neon-bar" style="color:red;">
-  <progress class='bar' value='0' max='100'></progress>
-  <span class='bar__value'>0%</span>
-</div>
-<p style="color:red;">Sorry, failed to load manifest file. We are scanning for files now. We would be back online soon. In the meantime, redirection links that were implemented can still be accessed. Thank you for your patience.</p>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
-
-* {
-  box-sizing: border-box;
-  font-family: 'Odibee Sans', cursive;
-}
-
-body,
-html {
-  padding: 0;
-  margin: 0;
-  background: #111;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
-$progress-height: 0.8em;
-$progress-padding: 0.2em;
-$progress-value-color: #03fcc2;
-$value-color: #fc0349;
-
-.bar {
-  -webkit-appearance: none;
-  height: $progress-height;
-
-  &::-webkit-progress-bar {
-    padding: $progress-padding;
-    border-radius: calc(#{$progress-height}/ 2);
-    background: lighten(#111, 5);
-  }
-  &::-webkit-progress-value {
-    background: $progress-value-color;
-    box-shadow: 0 0 0.6em lighten($progress-value-color, 2),
-      0 0 0.8em lighten($progress-value-color, 4);
-    border-radius: calc(#{$progress-height}/2);
-  }
-}
-
-.bar__value {
-  color: $value-color;
-  letter-spacing: 1px;
-  text-shadow: 0 0 .3em darken($value-color, 1),
-    0 0 .6em darken($value-color, 6);
-}
-
-</style>
-
-<script>
-  const progressBar = document.querySelector(".bar"),
-      progressBarValue = document.querySelector('.bar__value');
-let value = 0,
-  max = 100;
-
-let anim = setInterval(() => {
-  if (value == max) {
-    clearInterval(anim);
-  } else {
-    value += 1;
-    progressBar.value = value;
-    progressBarValue.innerText = value + '%';
-  }
-}, 80);
-
-</script>
- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!DOCTYPE html>
-<html>
-<body>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<!-- Hide source code -->
-<!--   From https://stackoverflow.com/questions/25228476/how-to-hide-the-source-code-of-a-html-page -->
-<!--   Disable right-click -->
-  <body oncontextmenu="return false" onload="replacePrompt()">
-    <title>Redirection</title>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<!--   Disable ctrl+u, F12 -->
-<!--   <script type="text/javascript">
-    function mousehandler(e) {
-        var myevent = (isNS) ? e : event;
-        var eventbutton = (isNS) ? myevent.which : myevent.button;
-        if ((eventbutton == 2) || (eventbutton == 3)) return false;
-    }
-    document.oncontextmenu = mischandler;
-    document.onmousedown = mousehandler;
-    document.onmouseup = mousehandler;
-    function disableCtrlKeyCombination(e) {
-        var forbiddenKeys = new Array("a", "s", "c", "x","u");
-        var key;
-        var isCtrl;
-        if (window.event) {
-            key = window.event.keyCode;
-            //IE
-            if (window.event.ctrlKey)
-                isCtrl = true;
-            else
-                isCtrl = false;
-        }
-        else {
-            key = e.which;
-            //firefox
-            if (e.ctrlKey)
-                isCtrl = true;
-            else
-                isCtrl = false;
-        }
-        if (isCtrl) {
-            for (i = 0; i < forbiddenKeys.length; i++) {
-                //case-insensitive comparation
-                if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
-                    return false;
-                }
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Redirection</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div  class="head_top">
+            <div class="header">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                           <div class="center-desk">
+                              <div class="logo">
+                                 <a href="#"><img src="https://res.cloudinary.com/kayden/image/upload/v1629118864/logo2_sez5dr.png" alt="#" /></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                           <span class="navbar-toggler-icon"></span>
+                           </button>
+                           <div class="collapse navbar-collapse" id="navbarsExample04">
+                              <ul class="navbar-nav mr-auto">
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="index.html"> Home  </a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="#about">About</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="#contact">Contact us</a>
+                                 </li>
+                              </ul>
+                              <div class="sign_btn"><a href="#">Sign in</a></div> <br>
+                              <div class="sign_btn"><a onclick="replacePrompt()">Enter ID</a></div>
+                           </div>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+
+
+            <!-- REPLACE SCRIPT -->
+
+
+            <p id="replace"></p>
+
+            <script>
+            function replacePrompt() {
+              var text;
+              var replacePrompt = prompt("Where would you like to go?\nType 'Help' for more information.", "");
+              switch(replacePrompt) {
+                case "elwchris":
+                  location.replace("https://replace.vercel.app/elwchris")
+                  text = "Redirecting...";
+                  break;
+                 case "PCPS Forms":
+                  location.replace("https://pcpsforms1.vercel.app/enter-form.html")
+                  text = "Redirecting...";
+                  break;
+                case "Help":
+                  location.replace("https://replace.vercel.app/faq/redirection")
+                  text = "Redirecting you to help centre...";
+                  break;
+                case "home":
+                  text = "You are already in the home page bro...";
+                  break;
+                case "Home":
+                  text = "You are already in the home page bro...";
+                  break;
+                case "Close":
+                  location.replace("https://replace.vercel.app/close")
+                  text = "Sure, closing tab...";
+                  break;
+                case "close":
+                  location.replace("https://replace.vercel.app/close")
+                  text = "Sure, closing tab...";
+                  break;
+                case "wa":
+                  location.replace("https://replace.vercel.app/wa")
+                  text = "Redirecting you to WhatsApp Web...";
+                  break;
+                case "btp6sci-kwko":
+                  location.replace("https://replace.vercel.app/external/btp6sci-kwko")
+                  text = "Redirecting you to BlueTree Education P6 Science Tuesday with Teacher Ko...";
+                  break;
+                  
+                  
+                 case "":
+                  text = "Please enter something so that I can help you.";
+                  break;
+                default:
+                  text = "Sorry, I don't think we can help you go to that one...";
+                  
+              }
+              document.getElementById("replace").innerHTML = text;
             }
-        }
-        return true;
-    }
-</script>
-   -->
-  
-  
-  
-  
-  
-  
-  
-  <script>
-    let keysDown = {};
-window.onkeydown = function(e) {
-  keysDown[e.key] = true;
+            </script>
 
-  if (keysDown["Control"] && keysDown["w"]) {
-    //do what you want when control and a is pressed for example
-    console.log("You will be redirected to a page that will close after a while.");
-    location.replace("https://replace.vercel.app/close");
-  }
-  else if( keysDown["Control"] && keysDown["u"] ){
-    console.log("");
-    alert("Sorry, request denied.\nYou tried to press Control + U, but we have disabled that feature.\nPlease contact support for more information.");
-  }
-  else if( keysDown["Function"] ){
-    console.log("");
-    alert("You pressed the function key.\nImpatient?\nNothing to do?");
-  }
-}
 
-window.onkeyup = function(e) {
-  keysDown[e.key] = false;
-}
-  </script>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+            <!-- END REPLACE SCRIPT -->
 
-  
-  
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<p></p>
 
-<button onclick="replacePrompt()">Go -></button>
 
-<p id="replace"></p>
 
-<script>
-function replacePrompt() {
-  var text;
-  var replacePrompt = prompt("Where would you like to go?\nType 'Help' for more information.", "");
-  switch(replacePrompt) {
-    case "elwchris":
-      location.replace("https://replace.vercel.app/elwchris")
-      text = "Redirecting...";
-      break;
-     case "PCPS Forms":
-      location.replace("https://pcpsforms1.vercel.app/enter-form.html")
-      text = "Redirecting...";
-      break;
-    case "Help":
-      location.replace("https://replace.vercel.app/faq/redirection")
-      text = "Redirecting you to help centre...";
-      break;
-    case "home":
-      text = "You are already in the home page bro...";
-      break;
-    case "Home":
-      text = "You are already in the home page bro...";
-      break;
-    case "Close":
-      location.replace("https://replace.vercel.app/close")
-      text = "Sure, closing tab...";
-      break;
-    case "close":
-      location.replace("https://replace.vercel.app/close")
-      text = "Sure, closing tab...";
-      break;
-    case "wa":
-      location.replace("https://replace.vercel.app/wa")
-      text = "Redirecting you to WhatsApp Web...";
-      break;
-    case "btp6sci-kwko":
-      location.replace("https://replace.vercel.app/external/btp6sci-kwko")
-      text = "Redirecting you to BlueTree Education P6 Science Tuesday with Teacher Ko...";
-      break;
-      
-      
-     case "":
-      text = "Please enter something so that I can help you.";
-      break;
-    default:
-      text = "Sorry, I don't think we can help you go to that one...";
-      
-  }
-  document.getElementById("replace").innerHTML = text;
-}
-</script>
-
-</body>
+            <!-- end header inner -->
+            <!-- end header -->
+            <!-- banner -->
+            <section class="banner_main">
+               <div class="container-fluid">
+                  <div class="row d_flex">
+                     <div class="col-md-5">
+                        <div class="text-bg">
+                           <h1>Redirection and<br>CDN</h1>
+                           <!-- <strong>BETA</strong> <img src="https://res.cloudinary.com/kayden/image/upload/v1629118487/beta.png"></img> -->
+                           <span>The future of links</span>
+                           <a href="#">Learn more</a>
+                        </div>
+                     </div>
+                     <div class="col-md-7 padding_right1">
+                        <div class="text-img">
+                           <figure><img src="https://motiongraphicsphoebe.files.wordpress.com/2018/10/8ee212dac057d412972e0c8cc164deee.gif" alt="#"/></figure>
+                           <h3>01</h3>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </header>
+      <!-- end banner -->
+      <!-- about -->
+      <div id="about" class="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>About Us</h2>
+                     <span>Our reliable and fast cloud servers can help you with your CDN and Redirects (short links)</span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-8 offset-md-2 ">
+                  <div class="about_box ">
+                     <figure><img src="https://res.cloudinary.com/kayden/image/upload/v1629119198/supercomputer_vobgwj.png" alt="#"/></figure>
+                     <br><a class="read_more" href="#">Read more</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- about -->
+      <!-- best -->
+      <div id="" class="best">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Build With Best </h2>
+                     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="best_box">
+                     <h4>500GB <br>Micro SD Card</h4>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t dolor in reprehenderit in voluptate velit</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="best_box">
+                     <h4>100GB <br> Internal Ram</h4>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t dolor in reprehenderit in voluptate velit</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="best_box">
+                     <h4>100% <br> High Quality</h4>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t dolor in reprehenderit in voluptate velit</p>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <a class="read_more" href="#">Read more</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end best -->
+      <!-- request -->
+      <div id="contact" class="request">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Request a free account (comes with free API)</h2>
+                     <span>Please enter all your details in the form provided below.</span>
+                     <br>
+                     <span style="color:red">Due to some setting up of billing, we are unable to accept any requests now.</span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="black_bg">
+                     <div class="row">
+                        <div class="col-md-7 ">
+                           <form class="main_form">
+                              <div class="row">
+                                 <div class="col-md-12 ">
+                                    <input class="contactus" placeholder="Name" type="text" name="Name" required disabled>
+                                 </div>
+                                 <div class="col-md-12">
+                                    <input class="contactus" placeholder="Phone number" type="text" name=" Phone number" required disabled>
+                                 </div>
+                                 <div class="col-md-12">
+                                    <input class="contactus" placeholder="Email" type="text" name="Email" required disabled>
+                                 </div>
+                                 <div class="col-md-12">
+                                    <textarea class="textarea" placeholder="Message" type="text" name="Message " required disabled> Message </textarea>
+                                 </div>
+                                 <div class="col-sm-12">
+                                    <button class="send_btn" disabled>Send</button>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                        <div class="col-md-5">
+                           <div class="mane_img">
+                              
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end request -->
+      <!-- two_box section -->
+      <div  class="two_box">
+         <div class="container-fluid">
+            <div class="row d_flex">
+               <div class="col-md-6">
+                  <div class="two_box_img">
+                     
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="two_box_img">
+                     <h2><span class="offer">15% </span>0ffer everyday</h2>
+                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end two_box section -->
+      <!-- testimonial -->
+      <div class="testimonial">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Testimonial</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div id="myCarousel" class="carousel slide testimonial_Carousel " data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="container">
+                              <div class="carousel-caption ">
+                                 <div class="row">
+                                    <div  class="col-md-12">
+                                       <div class="test_box">
+                                          <h3>Michl ro</h3>
+                                          <p><i class="padd_rightt0"><img src="images/te1.png" alt="#"/></i>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some <i class="padd_leftt0"><img src="images/te2.png" alt="#"/></i> <br>form, by injected humour, or randomised words which don't look even slightly believable</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row">
+                                    <div  class="col-md-12">
+                                       <div class="test_box">
+                                          <h3>Michl ro</h3>
+                                          <p><i class="padd_rightt0"><img src="images/te1.png" alt="#"/></i>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some <i class="padd_leftt0"><img src="images/te2.png" alt="#"/></i> <br>form, by injected humour, or randomised words which don't look even slightly believable</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row">
+                                    <div  class="col-md-12">
+                                       <div class="test_box">
+                                          <h3>Michl ro</h3>
+                                          <p><i class="padd_rightt0"><img src="images/te1.png" alt="#"/></i>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some <i class="padd_leftt0"><img src="images/te2.png" alt="#"/></i> <br>form, by injected humour, or randomised words which don't look even slightly believable</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end testimonial -->
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="cont">
+                        <h3> <strong class="multi">Redirection and CDN service</strong><br>
+                           Responsive Landing Page 2019
+                        </h3>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="cont_call">
+                        <h3> <strong class="multi">Email</strong><br>
+                           
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2021 All Rights Reserved Kayden Lee</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
 </html>
+
