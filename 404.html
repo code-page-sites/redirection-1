@@ -1,128 +1,576 @@
-
-
 <!DOCTYPE html>
-<html>
-<title>404 Not found!! | Redirection</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet"> 
-<svg width="380px" height="500px" viewBox="0 0 837 1045" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M353,9 L626.664028,170 L626.664028,487 L353,642 L79.3359724,487 L79.3359724,170 L353,9 Z" id="Polygon-1" stroke="#007FB2" stroke-width="6" sketch:type="MSShapeGroup"></path>
-        <path d="M78.5,529 L147,569.186414 L147,648.311216 L78.5,687 L10,648.311216 L10,569.186414 L78.5,529 Z" id="Polygon-2" stroke="#EF4A5B" stroke-width="6" sketch:type="MSShapeGroup"></path>
-        <path d="M773,186 L827,217.538705 L827,279.636651 L773,310 L719,279.636651 L719,217.538705 L773,186 Z" id="Polygon-3" stroke="#795D9C" stroke-width="6" sketch:type="MSShapeGroup"></path>
-        <path d="M639,529 L773,607.846761 L773,763.091627 L639,839 L505,763.091627 L505,607.846761 L639,529 Z" id="Polygon-4" stroke="#F2773F" stroke-width="6" sketch:type="MSShapeGroup"></path>
-        <path d="M281,801 L383,861.025276 L383,979.21169 L281,1037 L179,979.21169 L179,861.025276 L281,801 Z" id="Polygon-5" stroke="#36B455" stroke-width="6" sketch:type="MSShapeGroup"></path>
-    </g>
-</svg>
-<div class="message-box">
-  <h1>404</h1>
-  <p>Page not found</p>
-  <div class="buttons-con">
-    <div class="action-link-wrap">
-      <a onclick="history.back(-1)" class="link-button link-back-button">Go Back</a>
-      <a href="https://replace.vercel.app" class="link-button">Go to Home Page</a>
-      <br><br><br>
-      <a href="mailto:kayden@programmer.net?subject=replace.vercel.app%20404%20error" class="link-button">Report an error</a>
-      <a onclick="location.reload();" class="link-button">Reload</a>
-    </div>
-  </div>
-</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found!!</title>
+</head>
+<body>
+    <div id="wrapper" class="stage1">
+        <div class="snowman">
+          <div class="hat"></div>
+          <div class="head">
+            <div class="face">
+              <div class="eyes"></div>
+              <div class="nose"></div>
+              <div class="smile"></div>
+            </div>
+          </div>
+          <div class="thorax">
+            <div class="buttons"></div>
+            <div class="arms">
+              <svg class="left" width="200" height="80" xmlns="http://www.w3.org/2000/svg">
+               <g>
+                <title>Layer 1</title>
+                <line id="svg_1" y2="73.5" x2="138" y1="13" x1="44.5" stroke-width="5" stroke="#594644" fill="none"/>
+                <line id="svg_2" y2="13" x2="92.5" y1="44" x1="92.5" stroke-width="5" stroke="#594644" fill="none"/>
+                <line transform="rotate(11.4819917678833 55.24999999999995,30.500000000000007) " id="svg_3" y2="32.5" x2="35.5" y1="28.5" x1="75" stroke-width="5" stroke="#594644" fill="none"/>
+                <line id="svg_4" y2="18.5" x2="103.5" y1="23" x1="93" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" stroke="#594644" fill="none"/>
+               </g>
+              </svg>
+              <svg class="right" width="200" height="80" xmlns="http://www.w3.org/2000/svg">
+               <g>
+                <title>Layer 1</title>
+                <line id="svg_1" y2="73.5" x2="138" y1="13" x1="44.5" stroke-width="5" stroke="#594644" fill="none"/>
+                <line id="svg_2" y2="13" x2="92.5" y1="44" x1="92.5" stroke-width="5" stroke="#594644" fill="none"/>
+                <line transform="rotate(11.4819917678833 55.24999999999995,30.500000000000007) " id="svg_3" y2="32.5" x2="35.5" y1="28.5" x1="75" stroke-width="5" stroke="#594644" fill="none"/>
+                <line id="svg_4" y2="18.5" x2="103.5" y1="23" x1="93" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" stroke="#594644" fill="none"/>
+               </g>
+              </svg>
+            </div>
+          </div>
+          <div class="not-legs"></div>
+        </div>
+        <div class="snow"></div>
+      </div>
+      <div class="ground"></div>
+      <form>
+        <input type="range" id="meltLevel" value="4" min="1" max="4">
+        <label>Help snowman be a snowman again and prevent him from melting!</label>
+      </form>
+</body>
 
 <style>
-    a {
-        font-family: 'Cavolini';
-    }
-    h1 {
-        font-family: 'Cavolini';
-    }
-    p {
-        font-family: 'Cavolini';
-    }
-    body {
-  background-color: #000000;
+    @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+ body {
+	 background: #C7EEF3;
+	 position: relative;
+	 width: 100%;
+	 display: flex;
+	 min-height: 100vh;
+	 flex-direction: column;
+	 align-items: stretch;
+	 align-content: flex-end;
+	 font-family: 'Josefin Sans', sans-serif;
+	 font-size: 12px;
 }
-svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -250px;
-  margin-left: -400px;
+ #wrapper {
+	 display: flex;
+	 width: 100%;
+	 align-items: flex-end;
+	 justify-content: flex-start;
+	 flex: 1;
 }
-.message-box {
-  height: 200px;
-  width: 380px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -100px;
-  margin-left: 50px;
-  color: #FFF;
-  font-family: Roboto;
-  font-weight: 300;
+ .snowman {
+	 position: relative;
+	 margin-left: 200px;
 }
-.message-box h1 {
-  font-size: 60px;
-  line-height: 46px;
-  margin-bottom: 40px;
+ .ground {
+	 display: block;
+	 background: linear-gradient(to bottom,#dcf4f8 0%,#ffffff 50%);
+	 width: 100%;
+	 min-height: 200px;
+	 border-top: 2px solid #705856;
+	 margin-top: -20px;
 }
-.buttons-con .action-link-wrap {
-  margin-top: 40px;
+ .head, .thorax, .not-legs {
+	 width: 100px;
+	 height: 90px;
+	 background: radial-gradient(ellipse at center,#ffffff 0%,#f3f3f3 50%,#ffffff 100%);
+	 border-radius: 45%;
+	 margin: 0 auto;
+	 display: block;
+	 z-index: 9;
+	 position: relative;
+	 border: 1px solid #705856;
+	 border-left-width: 3px;
+	 border-left-color: #90635d;
+	 transition: all 0.5s ease-in-out;
 }
-.buttons-con .action-link-wrap a {
-  background: #68c950;
-  padding: 8px 25px;
-  border-radius: 4px;
-  color: #FFF;
-  font-weight: bold;
-  font-size: 14px;
-  transition: all 0.3s linear;
-  cursor: pointer;
-  text-decoration: none;
-  margin-right: 10px
+ .hat {
+	 width: 70px;
+	 height: 75px;
+	 background: linear-gradient(to bottom,#478580 0%,#5b7471 55%);
+	 border-radius: 8%;
+	 border-radius-top: 20%;
+	 z-index: 10;
+	 position: absolute;
+	 top: -60px;
+	 right: calc(50% - 20px);
+	 backface-visibility: hidden;
+	 perspective: 1000;
+	 transform: rotate(-15deg);
+	 border: 1px solid #705856;
+	 transition: all 0.5s ease-in-out;
 }
-.buttons-con .action-link-wrap a:hover {
-  background: #5A5C6C;
-  color: #fff;
+ .hat:after {
+	 content: '';
+	 width: 120px;
+	 height: 11px;
+	 background: #5B7471;
+	 position: absolute;
+	 bottom: -1px;
+	 right: calc(50% - 60px);
+	 border-radius: 10px;
+	 border: 1px solid #705856;
+}
+ .eyes, .nose, .smile {
+	 width: 100%;
+	 position: absolute;
+	 height: 20px;
+	 top: 25px;
+	 transition: all 0.5s ease-in-out;
+}
+ .eyes:before, .eyes:after {
+	 content: '';
+	 width: 15px;
+	 height: 15px;
+	 background: #362b2a;
+	 display: block;
+	 border-radius: 48%;
+	 position: absolute;
+	 top: 0;
+	 transition: all 0.5s ease-in-out;
+}
+ .eyes:before {
+	 left: 35px;
+	 top: 5px;
+}
+ .eyes:after {
+	 right: 15px;
+}
+ .nose:before {
+	 content: '';
+	 width: 0;
+	 height: 0;
+	 border-style: solid;
+	 border-width: 8px 0 8px 60px;
+	 border-color: transparent transparent transparent #EB9B7A;
+	 position: absolute;
+	 top: 24px;
+	 right: -20px;
+	 transform: rotate(15deg);
+	 transition: all 0.5s ease-in-out;
+}
+ .thorax {
+	 width: 130px;
+	 height: 120px;
+	 margin-top: -25px;
+	 z-index: 8;
+	 border-bottom-width: 3px;
+}
+ .thorax .buttons {
+	 position: absolute;
+	 width: 15px;
+	 height: 15px;
+	 background: black;
+	 top: 50%;
+	 right: calc(33%);
+	 border-radius: 47%;
+	 transform: rotate(-5deg);
+	 transition: all 0.5s ease-in-out;
+}
+ .thorax .buttons:before, .thorax .buttons:after {
+	 content: '';
+	 position: absolute;
+	 width: 15px;
+	 height: 15px;
+	 background: #362b2a;
+	 top: -160%;
+	 right: 2px;
+	 border-radius: 47%;
+	 transition: all 0.5s ease-in-out;
+}
+ .thorax .buttons:after {
+	 top: 160%;
+}
+ .thorax .arms {
+	 width: 100%;
+	 height: 8px;
+	 position: absolute;
+	 top: 50%;
+	 left: 0;
+}
+ .thorax .arms svg {
+	 position: absolute;
+	 top: -80px;
+	 left: -140px;
+}
+ .thorax .arms svg.right {
+	 transform: rotate(120deg);
+	 left: auto;
+	 right: -145px;
+}
+ .not-legs {
+	 width: 175px;
+	 height: 175px;
+	 margin-top: -40px;
+	 z-index: 7;
+	 border-bottom-width: 3px;
+}
+ #wrapper.stage2 .head, #wrapper.stage2 .thorax, #wrapper.stage2 .not-legs {
+	 width: 105px;
+	 height: 85px;
+	 border-radius: 42%;
+}
+ #wrapper.stage2 .thorax {
+	 width: 135px;
+	 height: 115px;
+}
+ #wrapper.stage2 .thorax .buttons {
+	 top: 52%;
+	 right: calc(32%);
+	 transform: rotate(-7deg);
+}
+ #wrapper.stage2 .not-legs {
+	 width: 180px;
+	 height: 170px;
+}
+ #wrapper.stage3 .head, #wrapper.stage3 .thorax, #wrapper.stage3 .not-legs {
+	 height: 80px;
+}
+ #wrapper.stage3 .thorax {
+	 transform: rotate(7deg);
+	 width: 135px;
+	 height: 115px;
+}
+ #wrapper.stage3 .thorax .buttons:before, #wrapper.stage3 .thorax .buttons:after {
+	 top: -150%;
+	 right: 5px;
+}
+ #wrapper.stage3 .thorax .buttons:after {
+	 top: 170%;
+}
+ #wrapper.stage3 .not-legs {
+	 width: 180px;
+	 height: 170px;
+}
+ #wrapper.stage3 .hat {
+	 top: -50px;
+	 right: calc(50% - 5px);
+	 transform: rotate(-25deg);
+}
+ #wrapper.stage3 .eyes:before {
+	 left: 30px;
+	 top: 8px;
+}
+ #wrapper.stage4 .head, #wrapper.stage4 .thorax, #wrapper.stage4 .not-legs {
+	 height: 78px;
+}
+ #wrapper.stage4 .head {
+	 transform: rotate(8deg);
+}
+ #wrapper.stage4 .thorax {
+	 transform: rotate(-10deg);
+	 width: 135px;
+	 height: 115px;
+	 margin-top: -30px;
+}
+ #wrapper.stage4 .thorax .buttons:before, #wrapper.stage4 .thorax .buttons:after {
+	 top: -100%;
+	 right: 6px;
+}
+ #wrapper.stage4 .thorax .buttons:after {
+	 top: 190%;
+}
+ #wrapper.stage4 .not-legs {
+	 width: 195px;
+	 height: 155px;
+	 margin-top: -60px;
+}
+ #wrapper.stage4 .hat {
+	 top: -45px;
+	 right: calc(50%);
+	 transform: rotate(-35deg);
+}
+ #wrapper.stage4 .eyes:before {
+	 left: 35px;
+	 top: 30px;
+}
+ #wrapper.stage4 .nose:before {
+	 top: 34px;
+	 right: -20px;
+	 transform: rotate(25deg);
+}
+ .snow {
+	 width: 100%;
+	 height: 100vh;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 background-color: transparent;
+	 z-index: 100;
+	 background: url('http://www.wearewebstars.dk/codepen/img/s1.png');
+	 background-position: 0px 0px;
+	 background-repeat: repeat;
+	 animation: snow1 8s linear infinite;
+	 pointer-events: none;
+}
+ .snow:before, .snow:after {
+	 content: '';
+	 width: 100%;
+	 height: 100vh;
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 pointer-events: none;
+}
+ .snow:before {
+	 background: url('http://www.wearewebstars.dk/codepen/img//s2.png');
+	 background-position: 0px 0px;
+	 background-repeat: repeat;
+	 animation: snow2 8s linear infinite;
+}
+ .snow:after {
+	 background: url('http://www.wearewebstars.dk/codepen/img//s3.png');
+	 background-position: 0px 0px;
+	 background-repeat: repeat;
+	 animation: snow3 8s linear infinite;
+}
+ #wrapper.stage2 .snow {
+	 animation: snow1 20s linear infinite;
+	 opacity: 0.75;
+}
+ #wrapper.stage2 .snow:before {
+	 animation: snow2 20s linear infinite;
+}
+ #wrapper.stage2 .snow:after {
+	 animation: snow3 20s linear infinite;
+}
+ #wrapper.stage3 .snow {
+	 animation: snow1 25s linear infinite;
+	 opacity: 0.5;
+}
+ #wrapper.stage3 .snow:before {
+	 opacity: 0;
+}
+ #wrapper.stage3 .snow:after {
+	 animation: snow3 25s linear infinite;
+}
+ #wrapper.stage4 .snow {
+	 opacity: 0;
+}
+ @keyframes snow1 {
+	 0% {
+		 background-position: 0px 0px;
+	}
+	 50% {
+		 background-position: 500px 500px;
+	}
+	 100% {
+		 background-position: 500px 1000px;
+	}
+}
+ @keyframes snow2 {
+	 0% {
+		 background-position: 0px 0px;
+	}
+	 50% {
+		 background-position: 100px 200px;
+	}
+	 100% {
+		 background-position: 200px 400px;
+	}
+}
+ @keyframes snow3 {
+	 0% {
+		 background-position: 0px 0px;
+	}
+	 50% {
+		 background-position: -100px 150px;
+	}
+	 100% {
+		 background-position: -100px 300px;
+	}
+}
+ form {
+	 position: absolute;
+	 right: 100px;
+	 top: 100px;
+	 width: 300px;
+	 margin: 0;
+}
+ form label {
+	 display: block;
+	 width: 100%;
+	 margin: 10px auto;
+	 text-align: center;
+	 color: #4A569D;
+	 font-size: 140%;
+}
+ input[type=range] {
+	 -webkit-appearance: none;
+	 width: 100%;
+	 margin: 0;
+}
+ input[type=range]:focus {
+	 outline: none;
+}
+ input[type=range]::-webkit-slider-runnable-track {
+	 width: 100%;
+	 height: 8px;
+	 cursor: pointer;
+	 background: #DC2424;
+	 background: linear-gradient(to left,#DC2424,#4A569D);
+	 border-radius: 20px;
+}
+ input[type=range]::-webkit-slider-thumb {
+	 height: 18px;
+	 width: 30px;
+	 border-radius: 15px;
+	 background: white;
+	 border: 1px solid white;
+	 cursor: pointer;
+	 -webkit-appearance: none;
+	 margin-top: -5px;
+}
+ input[type=range]:focus::-webkit-slider-runnable-track {
+	 background: #DC2424;
+	 background: linear-gradient(to left,#DC2424,#4A569D);
+}
+ input[type=range]::-moz-range-track {
+	 width: 100%;
+	 height: 8px;
+	 cursor: pointer;
+	 background: #DC2424;
+	 background: linear-gradient(to left,#DC2424,#4A569D);
+	 border-radius: 25px;
+}
+ input[type=range]::-moz-range-thumb {
+	 border: 1px solid white;
+	 height: 18px;
+	 width: 30px;
+	 border-radius: 15px;
+	 background: white;
+	 cursor: pointer;
+}
+ input[type=range]::-ms-track {
+	 width: 100%;
+	 height: 10px;
+	 cursor: pointer;
+	 background: transparent;
+	 border-color: transparent;
+	 color: transparent;
+}
+ input[type=range]::-ms-fill-lower {
+	 background: #DC2424;
+	 background: linear-gradient(to left,#DC2424,#4A569D);
+	 border-radius: 50px;
+}
+ input[type=range]::-ms-fill-upper {
+	 background: #DC2424;
+	 background: linear-gradient(to left,#DC2424,#4A569D);
+	 border-radius: 50px;
+}
+ input[type=range]::-ms-thumb {
+	 border: 1px solid white;
+	 height: 18px;
+	 width: 30px;
+	 border-radius: 15px;
+	 background: white;
+	 cursor: pointer;
+	 height: 10px;
+}
+ input[type=range]:focus::-ms-fill-lower {
+	 background: #DC2424;
+	 background: linear-gradient(to left,#DC2424,#4A569D);
+}
+ input[type=range]:focus::-ms-fill-upper {
+	 background: #DC2424;
+	 background: linear-gradient(to left,#DC2424,#4A569D);
+}
+ @media screen and (max-height: 600px) {
+	 .ground {
+		 min-height: 75px;
+	}
+}
+ @media only screen and (max-device-width: 667px) {
+	 body {
+		 flex-wrap: wrap;
+		 font-size: 10px;
+	}
+	 #wrapper {
+		 max-width: 100vw;
+		 align-items: flex-end;
+		 justify-content: center;
+		 overflow: hidden;
+	}
+	 .snowman {
+		 margin-left: 0px;
+	}
+	 .ground {
+		 min-height: 30px;
+	}
+	 form {
+		 right: auto;
+		 left: calc(50% - 40%);
+		 top: 20px;
+		 width: 80%;
+		 margin: 10px 0;
+	}
+	 form label {
+		 margin: 15px auto;
+	}
+	 input[type=range]::-webkit-slider-thumb {
+		 height: 30px;
+		 width: 40px;
+		 margin-top: -10px;
+	}
+	 input[type=range]::-moz-range-thumb {
+		 height: 30px;
+		 width: 40px;
+	}
+	 input[type=range]::-ms-thumb {
+		 height: 30px;
+		 width: 40px;
+	}
 }
 
-#Polygon-1 , #Polygon-2 , #Polygon-3 , #Polygon-4 , #Polygon-4, #Polygon-5 {
-  animation: float 1s infinite ease-in-out alternate;
-}
-#Polygon-2 {
-  animation-delay: .2s; 
-}
-#Polygon-3 {
-  animation-delay: .4s; 
-}
-#Polygon-4 {
-  animation-delay: .6s; 
-}
-#Polygon-5 {
-  animation-delay: .8s; 
-}
-
-@keyframes float {
-	100% {
-    transform: translateY(20px);
-  }
-}
-@media (max-width: 450px) {
-  svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -250px;
-    margin-left: -190px;
-  }
-  .message-box {
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -190px;
-    text-align: center;
-  }
-}
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const melt = document.getElementById("meltLevel");
+  const wrap = document.getElementById('wrapper');
+  melt.addEventListener("change", function(){
+    switch (melt.value) {
+      case '1':
+        wrap.className = "";
+        wrap.classList.add('stage1');
+        break;
+      case '2':
+        wrap.className = "";
+        wrap.classList.add('stage2');
+        break;
+      case '3':
+        wrap.className = "";
+        wrap.classList.add('stage3');
+        break;
+      case '4':
+        wrap.className = "";
+        wrap.classList.add('stage4');
+        break;
+      default:
+        wrap.className = "";
+        wrap.classList.add('stage1');
+    }
+  });
+}, false);
+</script>
 
 </html>
