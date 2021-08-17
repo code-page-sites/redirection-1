@@ -71,7 +71,7 @@
                                     <a class="nav-link" href="#contact">Contact us</a>
                                  </li>
                               </ul>
-                              <div class="sign_btn"><a href="#">Sign in</a></div> <br>
+                              <div class="sign_btn"><a href="#">Sign in</a></div> <br><br>
                               <div class="sign_btn"><a onclick="replacePrompt()">Enter ID</a></div>
                            </div>
                         </nav>
@@ -92,9 +92,9 @@
               var text;
               var replacePrompt = prompt("Where would you like to go?\nType 'Help' for more information.", "");
               switch(replacePrompt) {
-                case "elwchris":
-                  location.replace("https://replace.vercel.app/elwchris")
-                  text = "Redirecting...";
+                case "sample":
+                  location.reload()
+                  text = "";
                   break;
                  case "PCPS Forms":
                   location.replace("https://pcpsforms1.vercel.app/enter-form.html")
