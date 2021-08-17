@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PDF</title>
+
+
+<!-- CSS for basic page styling, not related to example -->
+
+</head>
+
+<body>
+<h1>PDF</h1>
+<p></p>
+
+
+
+<script src="https://res.cloudinary.com/kayden/raw/upload/v1629195111/pdfobject-allow-download.min.js"></script>
+<script>
+PDFObject.embed(".pdf");
+</script>
+
+</body>
+</html>
+
+<style>
+@charset "UTF-8";
+
+* { box-sizing: border-box; }
+
+body {
+	font: 16px sans-serif;
+	color: #454545;
+    /*background: rgb(218,244,249);*/
+    background: #fff;
+	margin: 0;
+	padding: 3rem 2rem 2rem 2rem;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 1.4rem;
+	color: #555;
+}
+</style>
