@@ -16,7 +16,7 @@
 
 
 
-<script src="https://unpkg.com/pdfobject@2.2.6/pdfobject.min.js"></script>
+<script src="https://res.cloudinary.com/kayden/raw/upload/v1629195111/pdfobject.min.js"></script>
 <script>
 PDFObject.embed(".pdf");
 </script>
