@@ -1,0 +1,208 @@
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <h2 class="card_title">Basic</h2>
+            <p class="pricing">FREE</p>
+            
+            <hr>
+            <ul class="features">
+                <li>One account</li>
+                <li>20 Links</li>
+                <li></li>
+            </ul>
+            <a href="https://replace.vercel.app/buy/free" class="cta_btn">Buy Now</a>
+        </div>
+        <div class="card">
+            <h2 class="card_title">Business</h2>
+            <p class="pricing"><strike>$100</strike> $50<span class="small" style="font-family: Cavolini;">/per month</span></p>
+            <p>Save $50</p>
+            <hr>
+            <ul class="features">
+                <li>1000 Links</li>
+                <li>Free API</li>
+                <li>Redirect with password</li>
+                <li>Smart tracking</li>
+            </ul>
+             <a href="#" class="cta_btn">Buy Now</a>
+        </div>
+        <div class="card">
+            <h2 class="card_title">Enterprise</h2>
+            <p class="pricing">Contact Us</p>
+            <p></p>
+            <hr>
+            <ul class="features">
+                <li>Unlimited number of accounts</li>
+                <li>Unlimited songs</li>
+                <li>Customized playlist</li>
+            </ul>
+             <a href="https://replace.vercel.app/buy/enterprise" class="cta_btn">Contact Now</a>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<a href="https://replace.vercel.app/pricing/compare" class="cta_btn">See comparison</a>
+<!-- <a href="" target="_blank" class="link">Watch on youtube <i class="fab fa-youtube"></i></a> -->
+<style>
+
+h2 {
+    font-family: Cavolini;
+}
+
+    p {
+        font-family: Cavolini;
+    }
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url("https://images.unsplash.com/photo-1598125443421-779f98323fe4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: Roboto;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4%;
+    padding: 12% 0;
+}
+
+.card {
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+}
+
+.card_title {
+    font-weight: normal;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.pricing {
+    font-weight: normal;
+    font-size: 60px;
+    font-family: Cavolini;
+}
+
+.pricing .small {
+    font-size: 16px;
+}
+
+hr {
+    margin-top: 70px;
+}
+
+.features {
+    margin: 40px 0;
+    list-style-position: inside;
+    font-family: Cavolini;
+}
+
+.features li {
+    padding-bottom: 10px;
+}
+
+a.cta_btn {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    background: rgba(21, 23, 24, 0.7);
+    border-radius: 29px;
+    padding: 20px 0;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: background .3s ease;
+    font-family: Cavolini;
+}
+
+a.cta_btn:hover {
+    background: #000;
+}
+.link {
+    position: fixed;
+    background-color: #D12322;
+    padding: 23px 40px;
+    right: -99px;
+    border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(-90deg);
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .1s ease-in-out;
+}
+
+.link i {
+    padding-left: 7px;
+}
+
+.link:hover {
+    text-decoration: underline;
+    background-color: black;
+}
+@media only screen and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2%;
+
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2%;
+        padding-bottom: 25%;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    .card_title {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .pricing {
+        font-size: 52px;
+    }
+
+    hr {
+        margin-top: 50px;
+    }
+
+    a.cta_btn {
+        font-size: 11px;
+    }
+}
+</style>
