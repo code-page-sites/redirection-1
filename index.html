@@ -5,7 +5,17 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://replace.vercel.app/tests/home/assets/css/main.css" />
-		<link rel="icon" href="https://replace.vercel.app/logo1.png" type="image/gif" sizes="16x16"> 
+		<link rel="icon" href="https://replace.vercel.app/logo1.png" type="image/gif" sizes="16x16">
+		<script type="text/javascript">
+  var onloadCallback = function() {
+    alert("grecaptcha is ready!");
+  };
+</script>
+
+		<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+</script>
+
 	</head>
 	<body class="is-preload">
 
