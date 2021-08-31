@@ -13,7 +13,7 @@
 </script> -->
 
 <!-- 		<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" -->
-    async defer>
+    <!-- async defer> -->
 </script>
 
 	</head>
@@ -140,14 +140,14 @@
 									<form method="POST" action="https://replace.vercel.app/contact-us-form-responses">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall">
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" required/>
 											</div>
 											<div class="col-6 col-12-xsmall">
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" required/>
 											</div>
 											<!-- Break -->
 											<div class="col-12">
-												<select name="demo-category" id="demo-category">
+												<select name="demo-category" id="demo-category" required>
 													<option value="">Contact Sales</option>
 													<option value="">Ask a question</option>
 													<option value="">Request API</option>
@@ -174,7 +174,7 @@
 												<label for="demo-copy">Email me a copy</label>
 											</div>
 											<div class="col-6 col-12-small">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<input type="checkbox" id="demo-human" name="demo-human" required>
 												<label for="demo-human">I am a human</label>
        											</div> 
 												
