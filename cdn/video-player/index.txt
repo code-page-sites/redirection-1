@@ -45,13 +45,13 @@ background-color:#10131a;
       captionSize: false
     },
     controls: {
-      playtime: false,
-      volume: false,
-      subtitles: false,
-      fullscreen: false,
+      playtime: ture,
+      volume: ture,
+      subtitles: true,
+      fullscreen: true,
       submenuCaptions : true,
-      submenuOffset : false,
-      allowLocalSubtitles : false  
+      submenuOffset : true,
+      allowLocalSubtitles : true  
     }
   },
   icons: {
