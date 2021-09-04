@@ -40,9 +40,9 @@ background-color:#10131a;
   },
   config: {
     storage: {
-      captionOffset: true,
-      playrateSpeed: true,
-      captionSize: true
+      captionOffset: false,
+      playrateSpeed: false,
+      captionSize: false
     },
     controls: {
       playtime: ture,
