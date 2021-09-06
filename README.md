@@ -1,6 +1,6 @@
 # Redirection and CDN service
 
-👉Example (https://replace.vercel.app)👈
+👉Website (https://replace.vercel.app)👈
 
 #Languages
 We use HTML, CSS, JavaScript and other programming languages such as PHP (currently not supported as we are using vercel to deploy, which means it does not have PHP installed) and python.
